@@ -1,0 +1,53 @@
+{
+  "name": "door",
+  "version": "0.0.1",
+  "description": "An electron-nuxt project",
+  "main": "./dist/main/index.js",
+  "scripts": {
+    "dev": "node .electron-nuxt/dev.js",
+    "build": "node .electron-nuxt/build.js",
+    "test": "",
+    "lint": "node_modules/.bin/eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter ./src",
+    "lint:fix": "yarn run lint -- --fix",
+    "preinstall": "node .electron-nuxt/check-engines.js",
+    "postinstall": "electron-builder install-app-deps & yarn run lint:fix"
+  },
+  "keywords": [],
+  "author": "吴家荣 <973430584@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/michalzaq12/electron-nuxt/blob/master/README.md",
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "resolutions": {
+    "@types/node": "^12.12.6"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@nuxtjs/eslint-config": "^6.0.0",
+    "@xpda-dev/core": "^0.1.6",
+    "@xpda-dev/electron-builder": "^0.2.1",
+    "@xpda-dev/electron-launcher": "^0.3.0",
+    "@xpda-dev/webpack-step": "^0.1.2",
+    "babel-eslint": "^10.1.0",
+    "browser-env": "^3.3.0",
+    "cross-env": "^7.0.3",
+    "deepmerge": "^4.2.2",
+    "electron": "^12.0.6",
+    "electron-builder": "^22.11.3",
+    "electron-devtools-installer": "^3.2.0",
+    "element-ui": "^2.15.1",
+    "eslint": "^7.25.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^4.0.2",
+    "nuxt": "^2.15.6",
+    "webpack": "^4.44.2",
+    "webpack-node-externals": "^2.5.2"
+  },
+  "dependencies": {
+    "moment": "^2.29.1",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "ws": "^7.5.0"
+  }
+}
